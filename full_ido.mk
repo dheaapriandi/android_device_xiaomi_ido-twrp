@@ -28,10 +28,9 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Kernel
+# Time Zone data for Recovery
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/kernel:kernel \
-    $(LOCAL_PATH)/recovery/dt.img:dt.img
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ido
